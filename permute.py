@@ -5,8 +5,11 @@ def permutations(array):
         return [array]
     arr = []
     for i in range(len(array)):
+        [arr.append([array[i]] + x) for x in permutations(array[0:i] + array[i+1:])]
+        '''
         for elem in permutations(array[0:i] + array[i+1:]):
             arr.append([array[i]] + elem)
+        '''
     return arr
 
 
