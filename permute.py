@@ -11,4 +11,6 @@ def permutations(array):
 
 
 if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        sys.exit('Usage: {0} comma_separated_list_of_elements'.format(sys.argv[0]))
     print permutations(sys.argv[1].split(','))
